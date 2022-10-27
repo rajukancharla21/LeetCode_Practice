@@ -1,13 +1,14 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        mem={}
-        for idx,val in enumerate(nums):
+        mem = {}
+        for idx, val in enumerate(nums):
             diff = target-val
-            if diff in mem:
-                return [idx,mem[diff]]
-            else:
+            if diff not in mem:
                 mem[val]=idx
-        return[-1,-1]
+            else:
+                return [mem[diff],idx]
+        return [-1,-1]
+        
         
         
             

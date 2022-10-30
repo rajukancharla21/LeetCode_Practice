@@ -20,7 +20,7 @@ class Solution:
                     r[i[0]]['id'] = i[1]
             
             maxP=max(maxP,r[i[0]]['popularty'])
-        print(r)
+        # print(r)
         res=[]
         for k,v in r.items():
             if v['popularty']==maxP:
